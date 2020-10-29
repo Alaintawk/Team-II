@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CustomersComponent } from './customers/customers.component';
 
 import { EditCustomerComponent } from './edit-customer/edit-customer.component';
@@ -11,8 +12,7 @@ import { OrdersComponent } from './orders/orders.component';
 
 const routes: Routes = [
 
-{path: 'aboutUS',
-component : AboutUsComponent},
+
 
 
 {path: 'add-customer',
@@ -26,6 +26,9 @@ component : EditCustomerComponent},
 {path: 'customers',
 component : CustomersComponent},
 
+{path: 'ayre',
+component : CustomersComponent},
+
 
 ];
 
@@ -34,3 +37,5 @@ component : CustomersComponent},
   exports: [RouterModule]
 })
 export class dashboardRoutingModule { }
+
+

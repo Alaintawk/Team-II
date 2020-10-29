@@ -11,6 +11,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { RegisterComponent } from './components/register/register.component';
 import { EditCustomerComponent } from './components/dashboard/edit-customer/edit-customer.component';
 import { CustomersComponent } from './components/dashboard/customers/customers.component';
+import { AyriBnossLAngularComponent } from './components/dashboard/ayri-bnoss-l-angular/ayri-bnoss-l-angular.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CustomersComponent } from './components/dashboard/customers/customers.c
     RegisterComponent,
     EditCustomerComponent,
     CustomersComponent,
+    AyriBnossLAngularComponent,
   ],
   imports: [
     BrowserModule,
