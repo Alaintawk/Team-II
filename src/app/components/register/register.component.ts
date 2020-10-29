@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor( private route: ActivatedRoute,
+    private router: Router,) {
 
+   }
   ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
+
+
+
+gotoDashboard(): void {
+  this.router.navigate(['dashboard']);
+
+}
 
 }

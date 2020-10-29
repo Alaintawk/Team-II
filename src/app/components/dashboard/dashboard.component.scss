@@ -1,11 +1,12 @@
 
-.header{
+.hd{
 width: 100vw;
+height: 70px ;
 background-color: purple;
 font-weight: bold;
 font-size: large;
 position: fixed;
-height: 70px ;
+
 display: flex;
 align-items: center;
 }
@@ -25,6 +26,14 @@ align-items: center;
 {
   border-radius: 20px;
 }
+
+.routerDiv{
+background-color: purple;
+margin-top: 69px;
+height: 100vw;
+
+}
+
 
 
 

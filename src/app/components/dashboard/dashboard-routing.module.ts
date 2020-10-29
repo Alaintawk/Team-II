@@ -9,17 +9,19 @@ import { OrdersComponent } from './orders/orders.component';
 
 
 const routes: Routes = [
-{
-path: 'dashboard',
-component: DashboardComponent,
+{path: 'dashboard',
+component : DashboardComponent,
+
+
 children: [
-    {
-      path: '',
-      redirectTo: 'customers',
-      pathMatch: 'full'
-    },
+
+
+  {path: 'customers' ,
+  component: CustomersComponent} ,
+
     {path: 'aboutUS',
     component : AboutUsComponent},
+
     {path: 'add-customer',
     component : AddCustomerComponent},
     {path: 'orders',

@@ -1,12 +1,8 @@
-.newCustForm
+.emailTxt, .passTxt, .addressTxt,.phoneTxt
 {
-  border: 1px solid gray;
-  border-radius: 5px;
-}
-
-.emailTxt, .passTxt, .addressTxt,.phoneTxt{
   border-radius: 5px;
   margin-left: 10px;
+
 }
 
 .addCustBtn{
@@ -15,4 +11,10 @@
   color: white;
 }
 
+.addCustDiv {
 
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+}

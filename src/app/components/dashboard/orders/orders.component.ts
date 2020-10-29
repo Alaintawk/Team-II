@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdersComponent implements OnInit {
 
+
+  orders = ['tets', 'test' ]
+
   constructor() { }
 
   ngOnInit(): void {
