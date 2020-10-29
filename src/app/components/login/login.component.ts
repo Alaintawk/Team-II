@@ -17,10 +17,12 @@ returnUrl: string;
 constructor(
     private route: ActivatedRoute,
     private router: Router,
-) {
-console.log("test")
-}
+)
+{}
+
+gotoRegister(): void {
+  this.router.navigate(['register']);
+
+}}
 
 
-
-}

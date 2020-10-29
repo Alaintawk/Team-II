@@ -1,9 +1,8 @@
-
-
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 
-import { dashboardRoutingModule } from './dashboard-routing.module';
+import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { OrdersComponent } from './orders/orders.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
@@ -13,16 +12,17 @@ import { CustomersComponent } from './customers/customers.component';
 
 @NgModule({
   declarations: [
+    DashboardComponent,
     OrdersComponent,
     AddCustomerComponent,
     AboutUsComponent,
-    DashboardComponent,
     EditCustomerComponent,
     CustomersComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-   dashboardRoutingModule
+    DashboardRoutingModule
   ],
   providers: [],
   bootstrap: [DashboardComponent]

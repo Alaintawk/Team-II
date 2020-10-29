@@ -1,26 +1,31 @@
-// .header
-// {
 
-//   position: fixed;
-// background-color: purple;
-// color:white;
-// font-weight: bold;
-// font-size: medium;
-
-
-// width : 110vw;
-
-// }
-
-
-// .logoutBtn
-// {direction: Rtl;}
-
-
-.navbar{
-
-  background-color: purple;
-  color: white;
-  font-weight: bold;
-  font-size: large;
+.header{
+width: 100vw;
+background-color: purple;
+font-weight: bold;
+font-size: large;
+position: fixed;
+height: 70px ;
+display: flex;
+align-items: center;
 }
+
+.customersLabel , .ordersLabel ,.aboutUsLabel,.LogoutLabel{
+  color: white;
+  border-radius: 20px;
+}
+
+
+.LogoutLabel{
+  float: right;
+  margin-right: 15px;
+}
+
+.imageDiv
+{
+  border-radius: 20px;
+}
+
+
+
+

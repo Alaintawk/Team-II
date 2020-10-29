@@ -1,17 +1,12 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-
 <div class="container-fluid loginContainer">
+
+
   <form>
+  <div class="login">Login</div>
     <div class="form-group">
       <label for="exampleInputEmail1" class="emailTxt">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Enter email">
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1" class="passTxt">Password</label>
@@ -20,9 +15,9 @@
 
     <button type="submit" class="btn btn-primary">Login</button>
 
+    <button type="submit" class="btn btn-primary regBtn" (click)="gotoRegister()" >Register</button>
 
 
-    <button type="submit" class="btn btn-primary registerBtn">Register</button>
   </form>
 
 </div>
