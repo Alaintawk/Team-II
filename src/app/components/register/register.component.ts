@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
     password: new FormControl('', Validators.minLength(8))
 });
 
-ngOnInIt(); void {
+ngOnInIt(): void {
 }
 
 register(): void {
