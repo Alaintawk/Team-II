@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/core';
 import { AngularFireStore, AngularFirestoreDocument } from '@angular/fire/firestoredocument/';
 import { Router } from '@angular/router';
 
+// tslint:disable-next-line: class-name
 export interface register {
   uid: string;
   email: string;
@@ -56,10 +57,7 @@ SignUp(email, password){
   });
 }
 
-get isLoggedIn
-
-
-(): boolean {
+get isLoggedIn(): boolean {
   const user = JSON.parse(localStorage.getItem('user'));
   return (user !== null && user.emailVerified !== false) ? true : false;
 }
@@ -84,4 +82,3 @@ SignOut() {
   });
   }
 }
-f
