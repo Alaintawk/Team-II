@@ -29,9 +29,9 @@ ngOnInIt(); void {
 }
 
 register(): void {
-  this.submitting = true;
-  const email = this.RegisterForm.value.email;
-  const password = this.RegisterForm.value.password;
+  this.submitting = true,
+  const email = this.RegisterForm.value.email,
+  const password = this.RegisterForm.value.password,
 
   if (email && password) {
     this.auth.SignUp(email, password).then(_ => /{
