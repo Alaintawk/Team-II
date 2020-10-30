@@ -1,6 +1,5 @@
 import {
   Component,
-  OnInit
 } from '@angular/core';
 import {
   FormBuilder,
@@ -20,7 +19,7 @@ import {
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
   loginForm: FormGroup;
   submitting = false;
@@ -36,30 +35,28 @@ export class LoginComponent implements OnInit {
     });
   }
 
-    ngOnInIt(){
-
-    }
-
-
-    // tslint:disable-next-line: no-unused-expression
-    login():void {
-      this.submitting = true,
-        const email = this.Logincomponent.value.email;
-      const password = this.loginForm.value.password;
-
-      if (email && password) {
-        this.auth.SignIn(email, password).then(_ => {
-          this.submitting = false;
-        }, err => {
-          this.submitting = false;
-        });
-      } else {
-        this.submitting = false;
-        return;
-      }
-    }
-
-    gotoRegisterPage(): void {
-      this.router.navigate(['register']);
-    }
+  gotoRegister(): void {
+    this.router.navigate(['register']);
   }
+
+login(): void {
+  this.submitting = true;
+  const email = this.loginForm.value.email;
+  const password = this.loginForm.value.password;
+
+  if (email && password) {
+    this.auth.SignIn(email, password).then(_ => {
+      this.submitting = false;
+    }, err => {
+      this.submitting = false;
+    });
+  } else {
+    this.submitting = false;
+    return;
+  }
+}
+
+gotoRegisterPage(): void {
+  this.router.navigate(['register']);
+ }
+}

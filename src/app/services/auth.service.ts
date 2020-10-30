@@ -1,10 +1,9 @@
 import { Injectable, NgZone } from '@angular/core';
-import { AngularFireAuth } from '@angular/core';
-import { AngularFireStore, AngularFirestoreDocument } from '@angular/fire/firestoredocument/';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 
-// tslint:disable-next-line: class-name
-export interface register {
+export interface Register {
   uid: string;
   email: string;
   displayName: string;
@@ -16,6 +15,8 @@ export interface register {
   providedIn: 'root'
 })
 export class AuthService {
+
+  userData: any;
 
   constructor(
     public afs: AngularFirestore,
@@ -43,15 +44,16 @@ SignIn(email, password) {
     this.ngZone.run(() => {
       this.router.navigate(['dashboard']);
     });
-    this.router.SetUserData(result.user);
+    // this.SetUserData(result.user);
   }).catch((error) => {
     window.alert(error.message);
   });
 }
+
 SignUp(email, password){
   return this.afAuth.createUserWithEmailAndPassword(email, password)
   .then((result) => {
-    this.SetUserData(result, user);
+    // this.SetUserData(result, user);
   }).catch((error) => {
     window.alert(error.message);
   });
@@ -69,7 +71,7 @@ AuthLogin(provider) {
       this.router.navigate(['dashboard']);
 
     });
-    this.SetUserData(result.user);
+    // this.SetUserData(result.user);
   }).catch((error) => {
     window.alert(error);
   });

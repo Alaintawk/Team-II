@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from 'src/app/services/crud.service';
-import { CrudService } from 'src/app/services/crud/crud.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,11 +13,10 @@ export class DashboardComponent implements OnInit {
   customerAge: number;
   CustomerAddress: string;
 
-
   constructor(
-    private crudService: CrudService)
+    private crudService: CrudService
+    )
     { }
-
 
   ngOnInit(): void {
     this.crudService.read_Customers().subscribe(data => {
@@ -31,7 +29,7 @@ export class DashboardComponent implements OnInit {
           Address: e.paypayload.doc.id().Address,
   };
 });
-console.log(this.customers);
+      console.log(this.customers);
     });
 
 }
@@ -41,19 +39,19 @@ CreateRecord(): void {
   record.Name = this.customerName;
   record.Age = this.customerAge;
   record.Address = this.CustomerAddress;
-  this.crudService.create_NewCustomer(record).then(resp => {
+  this.crudService.create_Customer(record).then(resp => {
     this.customerName = '';
     this.customerAge = undefined;
     this.CustomerAddress = '';
-console.log(reso);
+    console.log(resp);
   })
   .catch(err => {
-    console.log(error);
+    console.log(err);
 });
 }
 
 RemoveRecord(rowID): void {
-  this.crudService.delete_Customer(rowID);
+  this.crudService.deleteCustomer(rowID);
 }
 
 EditRecord(record): void {
